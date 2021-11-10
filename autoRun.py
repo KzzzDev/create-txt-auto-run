@@ -11,11 +11,14 @@ pyautogui.click(500, 500)
 numberOfFiles = 101
 n = 1
 alf = []
+alf_set = []
 
 # 重複しないアルファベット2文字の組合せを100個性性
 while len(alf) < numberOfFiles:
+    alf.extend(alf_set)
     alf = ["".join(random.sample(string.ascii_lowercase, k=2)) for _ in range(numberOfFiles)]
-    alf = list(set(alf))
+    # alf.extend(random.sample(string.ascii_lowercase, k=2))
+    alf_set = list(set(alf))
 
 
 while n < numberOfFiles:
