@@ -8,21 +8,21 @@ pyautogui.click(500, 500)
 
 # ファイルをいくつ作成するか？
 # numberOfFiles = 10
-numberOfFiles = 101
+numberOfFiles = 100
 n = 1
 alf = []
 
-# 重複しないアルファベット2文字の組合せを100個性性
-while len(alf) < numberOfFiles:
+# 重複しないアルファベット2文字の組合せを<numberOfFiles>個生成
+while len(alf) <= numberOfFiles:
     alf.extend(alf)
     alf = ["".join(random.sample(string.ascii_lowercase, k=2)) for _ in range(numberOfFiles)]
     # 重複を削除
     alf = list(set(alf))
 
 
-while n < numberOfFiles:
+while n <= numberOfFiles:
     # ファイルの作成処理
-    # 「vi 00n.txt」を入力
+    # 「vi 00<n>.txt」を入力
     pyautogui.typewrite('vi ' + str(n).zfill(3) + '.txt')
     # returnキーを押す
     pyautogui.keyDown('return')
