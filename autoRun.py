@@ -8,16 +8,17 @@ pyautogui.click(500, 500)
 
 # ファイルをいくつ作成するか？
 # numberOfFiles = 10
-numberOfFiles = 100
+numberOfFiles = 200
 n = 1
 alf = []
+alf_set = []
 
 # 重複しないアルファベット2文字の組合せを<numberOfFiles>個生成
 while len(alf) <= numberOfFiles:
-    alf.extend(alf)
-    alf = ["".join(random.sample(string.ascii_lowercase, k=2)) for _ in range(numberOfFiles)]
+    alf_set = ["".join(random.sample(string.ascii_lowercase, k=2)) for _ in range(numberOfFiles)]
     # 重複を削除
-    alf = list(set(alf))
+    alf_set = list(set(alf_set))
+    alf.extend(alf_set)
 
 
 while n <= numberOfFiles:
