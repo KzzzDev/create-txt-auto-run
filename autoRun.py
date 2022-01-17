@@ -7,8 +7,8 @@ import string
 pyautogui.click(500, 500)
 
 # ファイルをいくつ作成するか？
-# numberOfFiles = 10
-numberOfFiles = 200
+numberOfFiles = 10
+
 n = 1
 alf = []
 alf_set = []
