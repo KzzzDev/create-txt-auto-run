@@ -62,4 +62,3 @@ pyautogui.click(500, 500)
 # Author
 
 * Kazumasa
-* HAL東京 高度情報処理学科
